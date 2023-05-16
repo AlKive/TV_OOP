@@ -10,4 +10,10 @@ class TV:
     def __init__(self, volume):
         self.volume = 1
         self.volume = volume   
+
+    #TVstatus ON and OFF
+    def TV_ON(self):
+        self.status = True    
+    def TV_OFF(self):
+        self.status = False    
         
