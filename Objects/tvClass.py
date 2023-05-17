@@ -1,4 +1,7 @@
+from tkinter import *
+from tkinter import simpledialog
 
+ws = Tk()
 class TV:
     #cursorem(runner)
     def __init__(self, channel = 1, volume_level = 1, status = False):
@@ -12,13 +15,14 @@ class TV:
     def TV_OFF(self):
         self.status = False    
         
-    #get TV channel
-    def get_TVchannel(self):
-        return self.TVchannel
-    #Set TV channel
-    def set_TVchannel(self, TVchannel):
-        if self.status and 1 <= TVchannel <= 120:
-            self.TVchannel = TVchannel
+    #get TV1 channel
+    def get_TV1channel(self):
+        self.TV1channel = simpledialog.askinteger("CHANNEL", "ENTER TV1 CHANNEL : ", parent=ws)
+        return self.TV1channel
+    #Set TV1 channel
+    def set_TV1channel(self, TV1channel):
+        if self.status and 1 <= TV1channel <= 120:
+            self.TV1channel = TV1channel
             
     #get volume
     def get_volume(self):
