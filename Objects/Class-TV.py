@@ -22,7 +22,7 @@ class TV:
         return self.TVchannel
     #Set TV channel
     def set_TVchannel(self, TVchannel):
-        if TVchannel <= 1 and TVchannel >= 120:
+        if self.status <= 1 and TVchannel >= 120:
             self.TVchannel = TVchannel
             
     #get volume
