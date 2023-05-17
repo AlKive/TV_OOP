@@ -1,15 +1,10 @@
 
 class TV:
     #cursorem(runner)
-    def __init__(self, TVchannel):
-        self.TVchannel = 1
-        self.TVchannel = TVchannel 
-    def __init__(self, status):    
-        self.status = False
-        self.status = status
-    def __init__(self, volume):
-        self.volume = 1
-        self.volume = volume   
+    def __init__(self, channel = 1, volume_level = 1, status = False):
+        self.channel = channel
+        self.volume_level = volume_level
+        self.status = status 
 
     #TVstatus ON and OFF
     def TV_ON(self):
@@ -21,9 +16,9 @@ class TV:
     def get_TVchannel(self):
         return self.TVchannel
     #Set TV channel
-    def set_TVchannel(self):
-        if self.status and 1<= TVchannel >= 120:
-            TVchannel = TVchannel
+    def set_TVchannel(self, TVchannel):
+        if self.status and 1 <= TVchannel <= 120:
+            self.TVchannel = TVchannel
             
     #get volume
     def get_volume(self):
@@ -41,8 +36,8 @@ class TV:
         if self.status and 1 <= TVchannel  >= 120:
             self.TVchannel += 1        
     #Volume Up
-    def volume_up(self):
-        if self.volume > 7:
+    def volume_up(self, volume):
+        if self.status and 1 <= volume <= 7 :
             self.volume += 1
     #method to volume down tv
     def volume_down(self):
