@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import simpledialog
+from tkinter import messagebox
 
 ws = Tk()
 class TV:
@@ -15,25 +16,18 @@ class TV:
     def TV_OFF(self):
         self.status = False    
         
-    #get TV1 channel
-    def get_TV1channel(self):
-        self.TV1channel = simpledialog.askinteger("CHANNEL", "ENTER TV1 CHANNEL : ", parent=ws)
-        return self.TV1channel
-    #Set TV1 channel
-    def set_TV1channel(self, TV1channel):
-        if self.status and 1 <= TV1channel <= 120:
-            self.TV1channel = TV1channel
-    #get TV2 channel
-    def get_TV2channel(self):
-        self.TV2channel = simpledialog.askinteger("CHANNEL", "ENTER TV1 CHANNEL : ", parent=ws)
-        return self.TV2channel
-    #Set TV1 channel
-    def set_TV2channel(self, TV2channel):
-        if self.status and 1 <= TV2channel <= 120:
-            self.TV2channel = TV2channel
+    #get TV channel
+    def get_TVchannel(self):
+        self.TVchannel = simpledialog.askinteger("CHANNEL", "Enter channel number: ", parent=ws)
+        return self.TVchannel
+    #Set TV channel
+    def set_TVchannel(self, TVchannel):
+        if self.status and 1 <= TVchannel <= 120:
+            self.TVchannel = TVchannel
             
     #get volume
     def get_volume(self):
+        self.volumel = simpledialog.askinteger("VOLUME", "Select Volume Level: ", parent=ws)
         return self.volume
     #set volume
     def set_volume(self, volume):
