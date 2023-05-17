@@ -17,3 +17,13 @@ class TV:
     def TV_OFF(self):
         self.status = False    
         
+    #get TV channel
+    def get_TVchannel(self):
+        return self.TVchannel
+    #Set TV channel
+    # Set TV channel
+    def set_TVchannel(self, TVchannel):
+        if TVchannel <= 1 and TVchannel >= 120:
+            self.TVchannel = TVchannel
+
+        
