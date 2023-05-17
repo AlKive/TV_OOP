@@ -21,9 +21,9 @@ class TV:
     def get_TVchannel(self):
         return self.TVchannel
     #Set TV channel
-    def set_TVchannel(self, TVchannel):
-        if self.status <= 1 and TVchannel >= 120:
-            self.TVchannel = TVchannel
+    def set_TVchannel(self):
+        if self.status and 1<= TVchannel >= 120:
+            TVchannel = TVchannel
             
     #get volume
     def get_volume(self):
@@ -33,12 +33,12 @@ class TV:
         if self.status and 1 <= volume <= 7:
             self.volume = volume
     #Channel UP
-    def channel_up(self):
-        if self.TVchannel  >= 120:
+    def channel_up(self, TVchannel):
+        if self.status and 1 <= TVchannel <= 7:
             self.TVchannel += 1        
     #Channel Down
-    def channel_up(self):
-        if self.TVchannel  >= 120:
+    def channel_up(self, TVchannel):
+        if self.status and 1 <= TVchannel  >= 120:
             self.TVchannel += 1        
     #Volume Up
     def volume_up(self):
@@ -47,6 +47,8 @@ class TV:
     #method to volume down tv
     def volume_down(self):
         if self.volume > 7:
-            self.volume -= 1        
+            self.volume -= 1   
+          
+
 
         
