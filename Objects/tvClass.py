@@ -23,6 +23,14 @@ class TV:
     def set_TV1channel(self, TV1channel):
         if self.status and 1 <= TV1channel <= 120:
             self.TV1channel = TV1channel
+    #get TV2 channel
+    def get_TV2channel(self):
+        self.TV2channel = simpledialog.askinteger("CHANNEL", "ENTER TV1 CHANNEL : ", parent=ws)
+        return self.TV2channel
+    #Set TV1 channel
+    def set_TV2channel(self, TV2channel):
+        if self.status and 1 <= TV2channel <= 120:
+            self.TV2channel = TV2channel
             
     #get volume
     def get_volume(self):
