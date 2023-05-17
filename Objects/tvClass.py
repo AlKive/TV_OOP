@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import simpledialog
-from tkinter import messagebox
+
 
 ws = Tk()
 class TV:
