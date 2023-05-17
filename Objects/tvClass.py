@@ -27,7 +27,7 @@ class TV:
             
     #get volume
     def get_volume(self):
-        self.volumel = simpledialog.askinteger("VOLUME", "Select Volume Level: ", parent=ws)
+        self.volume = simpledialog.askinteger("VOLUME", "Select Volume : ", parent=ws)
         return self.volume
     #set volume
     def set_volume(self, volume):
